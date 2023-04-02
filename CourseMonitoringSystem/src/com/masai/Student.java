@@ -1,36 +1,46 @@
 package com.masai;
 
-public class Student {
-	private int sturoll;
-	private String stuname;
-	private int stufee;
-	private String stubatch;
+import java.io.Serializable;
+
+public class Student implements Serializable {
+	private int sno;
+	private String sname;
+	private String semail;
+	private int sfee;
+	private String sbatch;
 	
-	public Student(int sturoll, String stuname, int stufee, String stubatch) {
+	public Student(int sno, String sname, String semail, int sfee, String sbatch) {
 		super();
-		this.sturoll = sturoll;
-		this.stuname = stuname;
-		this.stufee = stufee;
-		this.stubatch = stubatch;
+		this.sno = sno;
+		this.sname = sname;
+		this.semail =semail;
+		this.sfee = sfee;
+		this.sbatch = sbatch;
 	}
 	
 	public int getRoll() {
-		return sturoll;
-	}
-	public int getFee() {
-		return stufee;
+		return sno;
 	}
 	public String getName() {
-		return stuname;
+		return sname;
 	}
+	
+	public String getEmail() {
+		return semail;
+	}
+	public int getFee() {
+		return sfee;
+	}
+	
 	public String getBatch() {
-		return stubatch;
+		return sbatch;
 	}
+	
 
 	@Override
 	public String toString() {
-		return "Student [StudentRoll = " + sturoll + ", StudentName = " + stuname + ", StudentFee = " + stufee + ", Studentbatch = " + stubatch
-				+ "]";
+		return "StudentRoll = " + sno + ", StudentName = " + sname + ",StudentMail = " + semail + ", StudentFee = " + sfee + ", Studentbatch = " + sbatch
+				;
 	}
 
 	
